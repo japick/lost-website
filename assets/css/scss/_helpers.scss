@@ -1,0 +1,52 @@
+// list styles
+.list {
+    &--bare {
+        padding: 0;
+        margin: 0;
+        
+        li {
+            list-style: none;
+        }
+    }
+    
+    &--center {
+        float: left;
+        position: relative;
+        left: 50%;
+        
+        li {
+            float: left;
+            position: relative;
+            right: 50%;
+            margin: 0 1rem;
+        }
+    }
+}
+
+.align {
+    &--center {
+        text-align: center;
+    }
+}
+
+.sidebar-list {
+   margin-bottom: 20px;
+}
+
+.align-center {
+   text-align: center;
+}
+
+.lede {
+   font-size: 2.4rem;
+   line-height: 1.2;
+   margin-bottom: 3rem;
+   letter-spacing: -1px;
+}
+
+// align vertical center
+.vc {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
