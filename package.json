@@ -1,0 +1,33 @@
+{
+  "name": "lost-website",
+  "version": "1.0.0",
+  "description": "Lost Grid website template files",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.11.1",
+    "autoprefixer": "^6.3.3",
+    "gulp-notify": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-sass": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "lost": "^6.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/japick/lost-website.git"
+  },
+  "author": "Jay Pick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/japick/lost-website/issues"
+  },
+  "homepage": "https://github.com/japick/lost-website#readme"
+}
