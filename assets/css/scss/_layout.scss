@@ -36,9 +36,19 @@ body.page {
    }
 
    &__inner {
-      max-width: 980px;
-      margin: 0 auto;
-      @include clearfix;
+       max-width: 1260px;
+       padding: 0 150px;
+       box-sizing: border-box;
+       transition: margin 0.3s cubic-bezier(.36,.24,.35,1.03);
+       @include clearfix;
+
+       @include breakpoint(l) {
+           margin: 0 auto;
+       }
+
+       &.shift-left {
+           margin-left: 400px;
+       }
    }
     
     &--content {
@@ -47,6 +57,7 @@ body.page {
     
     &--center {
         text-align:center;
+        margin: 0 auto;
     }
 
    p:last-child {

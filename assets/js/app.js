@@ -42,7 +42,7 @@
             e.preventDefault();
             $(this).parent().toggleClass('is-active');
             $(this).toggleClass('is-active');
-            $('.section').toggleClass('padding-left');
+            $('.section__inner').toggleClass('shift-left');
          });
       },
        
