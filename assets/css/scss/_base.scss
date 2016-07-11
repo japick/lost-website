@@ -19,6 +19,12 @@ body {
 a {
 	color: $turquoise;
 	transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  text-decoration: none;
+
+    &:hover {
+        color: darken($turquoise, 10);
+    }
 }
 
 ul,

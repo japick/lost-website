@@ -6,7 +6,7 @@
    text-decoration: none;
    margin-bottom: 4px;
    position: relative;
-    border-radius: 2rem;
+   border-radius: 2rem;
 
    &:active {
       top: 2px;
@@ -34,6 +34,7 @@
        &:hover {
            background-color: darken($khaki, 5);
            box-shadow: 0px 4px 0px darken($khaki, 20);
+           color: $dark-grey;
        }
 
       &:active {
@@ -48,10 +49,27 @@
        &:hover {
            background-color: darken($turquoise, 5);
            box-shadow: 0px 4px 0px darken($turquoise, 16);
+           color: $dark-grey;
        }
 
       &:active {
          //box-shadow: 0px 2px 0px darken($turquoise, 12);
       }
    }
+}
+
+// scroll to top link
+.scroll-top {
+    display: block;
+    width: 100%;
+    border-top: 1px solid $turquoise;
+    border-bottom: 1px solid $turquoise;
+    text-decoration: none;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.arrow {
+    position: relative;
+    top: 4px;
 }

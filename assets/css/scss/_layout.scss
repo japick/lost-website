@@ -4,23 +4,32 @@ body.page {
 
 // Logo
 .logo {
-   text-indent: -99999px;
-   display: block;
-   background: url('../../assets/img/lost-grid.svg') no-repeat 50% 50%;
-   background-size: 100%;
-   width: 500px;
-   height: 153px;
-   margin: 0 auto 3rem;
+    text-indent: -99999px;
+    display: block;
+    background: url('../../assets/img/lost-grid.svg') no-repeat 50% 50%;
+    background-size: 100%;
+
+    &--large {
+        width: 500px;
+        height: 153px;
+        margin: 0 auto 3rem;
+    }
+
+    &--small {
+        width: 300px;
+        height: 92px;
+        margin: 0 0 3rem;
+    }
 }
 
 // Sections
 .section {
-   overflow: hidden;
-   clear: both;
-   transition: margin 0.3s cubic-bezier(.36,.24,.35,1.03);
-   padding: 100px 148px;
-   width: 100%;
-   box-sizing: border-box;
+    overflow: hidden;
+    clear: both;
+    transition: margin 0.3s cubic-bezier(.36,.24,.35,1.03);
+    padding: 100px 148px;
+    width: 100%;
+    box-sizing: border-box;
 
    &.padding-left {
      margin-left: 400px;
@@ -29,7 +38,7 @@ body.page {
    &__inner {
       max-width: 980px;
       margin: 0 auto;
-      overflow: hidden;
+      @include clearfix;
    }
     
     &--content {
@@ -47,58 +56,63 @@ body.page {
 
 // Main Nav
 .nav {
-	&__side {
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		max-width: 400px;
-		background: $orange;
-		box-sizing: border-box;
-		padding: 90px 50px;
-		margin-left: -400px;
-		transition: margin 0.3s cubic-bezier(.36,.24,.35,1.03);
-      text-align: right;
-      z-index: 3;
+    &__side {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        background: $orange;
+        box-sizing: border-box;
+        padding: 90px 50px;
+        margin: 0 0 0 -400px;
+        transition: margin 0.3s cubic-bezier(.36,.24,.35,1.03);
+        text-align: right;
+        z-index: 3;
 
-		&.is-active {
-			margin-left: 0;
-		}
+        &.is-active {
+            margin-left: 0;
+        }
 
-      .h3 {
-         color: $white;
-         margin: 0;
-      }
+        ul {
+            margin-bottom: 2rem;
 
-      a {
-         color: $dark-grey;
-         text-decoration: none;
-      }
+            a {
+                display: block;
 
-      li {
-         list-style: none;
-         margin-bottom: 2px;
-      }
-	}
+                line-height: 2;
+                color: $white;
 
-	&__toggle {
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 90px;
-		height: 90px;
-		background: $orange;
-		text-decoration: none;
-		text-align: center;
-    cursor: pointer;
-    box-sizing: border-box;
+                &.is-active {
+                    color: $dark-grey;
+                }
+            }
+        }
 
-		&:before {
-			font-weight: 600;
-			line-height: 40px;
-		}
-	}
+        li {
+            list-style: none;
+        }
+
+    }
+
+    &__toggle {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 90px;
+        height: 90px;
+        background: $orange;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        box-sizing: border-box;
+
+        &:before {
+            font-weight: 600;
+            line-height: 40px;
+        }
+    }
 }

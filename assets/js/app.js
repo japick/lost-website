@@ -17,6 +17,7 @@
          japick.on_scroll();
          japick.on_load();
          japick.slidePanel();
+         japick.scrollToTop();
       },
 
       on_resize: function() {
@@ -49,6 +50,13 @@
                 element = $('.fill-viewport');
            
            element.css('height', viewportHeight + 'px');
+       },
+
+       scrollToTop: function() {
+            $('.scroll-top').click(function(){
+                $('html, body').animate({scrollTop : 0}, 300);
+                return false;
+            });
        },
 
    };
