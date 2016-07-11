@@ -18,6 +18,7 @@
          japick.on_load();
          japick.slidePanel();
          japick.scrollToTop();
+         japick.scrollToSection();
       },
 
       on_resize: function() {
@@ -57,6 +58,19 @@
                 $('html, body').animate({scrollTop : 0}, 300);
                 return false;
             });
+       },
+
+       scrollToSection: function() {
+            $('.page-anchors a').on('click',function (e) {
+              e.preventDefault();
+
+              var target = this.hash;
+              var $target = $(target);
+
+              $('html, body').stop().animate({
+                  'scrollTop': $target.offset().top
+              }, 300, 'swing');
+          });
        },
 
    };
