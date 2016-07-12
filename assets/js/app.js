@@ -19,11 +19,13 @@
          japick.slidePanel();
          japick.scrollToTop();
          japick.scrollToSection();
+         //japick.detectMobile();
       },
 
       on_resize: function() {
          japick.els.$window.resize( function() {
             japick.fillViewport();
+            japick.detectMobile();
          }).resize();
       },
 
@@ -42,7 +44,10 @@
             e.preventDefault();
             $(this).parent().toggleClass('is-active');
             $(this).toggleClass('is-active');
-            $('.section__inner').toggleClass('shift-left');
+
+            if(japick.els.$window.width() > 1024) {
+                $('.section__inner').toggleClass('shift-left');
+            }
          });
       },
        
@@ -71,6 +76,22 @@
                   'scrollTop': $target.offset().top
               }, 300, 'swing');
           });
+       },
+
+       detectMobile: function() {
+            var navToggle = $('.nav__toggle'),
+                sideNav = $('.nav__side'),
+                sectionWrapper = $('.section__inner');
+
+            if(japick.els.$window.width() > 1024) {
+                navToggle.addClass('is-active');
+                sideNav.addClass('is-active');
+                sectionWrapper.addClass('shift-left');
+            } else {
+                navToggle.removeClass('is-active');
+                sideNav.removeClass('is-active');
+                sectionWrapper.removeClass('shift-left');
+            }
        },
 
    };
