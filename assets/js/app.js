@@ -46,7 +46,7 @@
             $(this).toggleClass('is-active');
 
             if(japick.els.$window.width() > 1024) {
-                $('.section__inner').toggleClass('shift-left');
+                $('#section-wrapper').toggleClass('shift-left');
             }
          });
       },
@@ -81,7 +81,7 @@
        detectMobile: function() {
             var navToggle = $('.nav__toggle'),
                 sideNav = $('.nav__side'),
-                sectionWrapper = $('.section__inner');
+                sectionWrapper = $('#section-wrapper');
 
             if(japick.els.$window.width() > 1024) {
                 navToggle.addClass('is-active');
