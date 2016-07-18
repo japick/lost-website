@@ -19,7 +19,6 @@
          japick.slidePanel();
          japick.scrollToTop();
          japick.scrollToSection();
-         //japick.detectMobile();
       },
 
       on_resize: function() {
